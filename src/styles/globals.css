@@ -1,0 +1,252 @@
+@import url("./table.css");
+@import url("./form.css");
+@import url("./display.css");
+@import url("./colors.css");
+@import url("./positions.css");
+@import url("./typography.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap');
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --color-primary: #BFCCDE;
+    --color-secondary: #FFFFFE;
+    --color-tertiary: #A3A1A5;
+    --color-accent: #09F6F6;
+    --color-border: #dedede66;
+    --color-error: #fe1242;
+
+    --bg-primary: #101823;
+    --bg-secondary: #FDFCFD;
+    --bg-tertiary: #263B54;
+    --bg-accent: var(--color-accent);
+    --bg-error: #fee7ea;
+
+    --border-radius-1: 2px;
+    --border-radius-2: 4px;
+    --border-radius-3: 8px;
+    --border-radius-4: 10px;
+    --border-radius-5: 14px;
+
+    --container-gutter: 16px;
+
+    /* color-scheme: light dark; */
+    color: var(--color-primary);
+    background-color: var(--bg-primary);
+
+    --font-body: 'Space Grotesk', -apple-system, sans-serif, system-ui, "Apple Color Emoji",
+        "Segoe UI Emoji";
+    --font-logo: 'Open Sans', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    height: 100%;
+    scroll-behavior: smooth;
+    background-image: url('~/assets/images/homebg.png');
+}
+
+img.rounded {
+    border-radius: var(--border-radius-2);
+}
+
+svg {
+    fill: currentColor;
+    aspect-ratio: 1/1;
+}
+
+/* TYPOGRARHY */
+h1,
+h2,
+h3,
+h4,
+span {
+    line-height: 1;
+}
+
+hr {
+    border-color: var(--color-border);
+}
+
+/* LINKS & BUTTONS */
+a {
+    text-decoration: none;
+}
+
+a:not(.button, .course-theme) {
+    color: var(--color-accent);
+}
+
+a.plain {
+    color: inherit;
+}
+
+a:not(.button, .course-theme):hover {
+    color: var(--color-accent-hover);
+}
+
+button,
+.button {
+    color: var(--color-white);
+    background-color: var(--color-accent);
+    padding: .8em 1em;
+    min-width: 135px;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius-2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+button:where(.small),
+.button:where(.small) {
+    padding: .25em .5em;
+    min-width: 30px;
+    font-size: .75rem;
+}
+
+button:where(.big),
+.button:where(.big) {
+    padding: .8rem 3em;
+    min-width: 300px;
+}
+
+button:not(.outline):hover,
+.button:not(.outline):hover {
+    opacity: .7;
+}
+
+.outline {
+    outline: 1px solid var(--color-accent);
+    color: var(--color-accent);
+    background-color: transparent;
+}
+
+.ghost {
+    background-color: transparent;
+}
+
+
+/* LISTS */
+.no-list-style {
+    list-style: none;
+}
+
+.no-list-pad {
+    padding-inline-start: 0;
+}
+
+
+/* UTILITY CONTAINERS */
+.error-page {
+    color: var(--color-error);
+    background-color: var(--bg-error);
+    height: 100%;
+
+    text-align: center;
+    padding: 1rem;
+}
+
+.container {
+    width: calc(100% - var(--container-gutter));
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.content {
+    width: 100%;
+    max-width: 900px;
+    border-radius: var(--border-radius-2);
+    padding: 1rem;
+}
+
+.content.medium {
+    max-width: 600px;
+}
+
+.content.small {
+    max-width: 350px;
+}
+
+.modal {
+    box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    max-width: 600px;
+    padding: 2em;
+    border-radius: var(--border-radius-2);
+    border: 0;
+}
+
+.modal::backdrop {
+    background-color: #1c1c1ca1;
+}
+
+.modal-close {
+    padding: .75rem 1rem;
+}
+
+
+/* UTILITY BORDERS/RADIUS */
+.r-0 {
+    border-radius: 0;
+}
+
+.r-1 {
+    border-radius: var(--border-radius-1);
+}
+
+.r-2 {
+    border-radius: var(--border-radius-2);
+}
+
+.r-3 {
+    border-radius: var(--border-radius-3);
+}
+
+.r-4 {
+    border-radius: var(--border-radius-4);
+}
+
+.r-5 {
+    border-radius: var(--border-radius-5);
+}
+
+.rounded {
+    border-radius: 50%;
+}
+
+/* END OF UTILITIES */
+
+/* body[data-theme='dark'] {
+    --color-primary: #bfbcbf;
+    --color-secondary: #151515;
+    --color-tertiary: #A3A1A5;
+    --color-border: #fffafa66;
+
+    --bg-primary: #1D1D1D;
+    --bg-secondary: #151515;
+    --bg-tertiary: #1D1D1D;
+    --bg-accent: var(--color-accent);
+    --bg-table-row: #dedede11;
+
+    color: var(--color-primary);
+    background-color: var(--bg-primary);
+} */

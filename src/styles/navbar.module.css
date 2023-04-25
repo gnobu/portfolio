@@ -1,0 +1,8 @@
+.logo {
+    font-family: var(--font-logo);
+}
+
+.hamburger {
+    background-color: #376392;
+    padding: .3em;
+}
