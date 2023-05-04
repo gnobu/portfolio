@@ -6,9 +6,10 @@ import nodejsIcon from './nodejs.png'
 import reactjsIcon from './reactjs.png'
 import remixIcon from './remix.png'
 import typescriptIcon from './typescript.png'
+import projectImage from './project-image.png'
 
 export {
     homeBg, expressIcon, javascriptIcon,
     mongodbIcon, nodejsIcon, reactjsIcon,
-    remixIcon, typescriptIcon
+    remixIcon, typescriptIcon, projectImage
 }

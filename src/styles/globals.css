@@ -6,6 +6,7 @@
 @import url("./typography.css");
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap');
+
 @font-face {
     font-family: 'Space Grotesk';
     src: url('/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf');
@@ -28,10 +29,10 @@
     --bg-error: #fee7ea;
 
     --border-radius-1: 2px;
-    --border-radius-2: 4px;
+    --border-radius-2: 5px;
     --border-radius-3: 8px;
     --border-radius-4: 10px;
-    --border-radius-5: 14px;
+    --border-radius-5: 20px;
 
     --container-gutter: 16px;
 
@@ -166,7 +167,7 @@ button:not(.outline):hover,
 }
 
 .container {
-    width: calc(100% - var(--container-gutter));
+    width: calc(100% - 2*var(--container-gutter));
     max-width: 1200px;
     margin-inline: auto;
 }
